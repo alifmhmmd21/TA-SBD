@@ -103,7 +103,7 @@
         height: 40px;
         font-size: 16px;
         background: #128ddf;
-        color: #fff;
+        color: azure;
         border-radius: 20px;
         cursor: pointer
     }
