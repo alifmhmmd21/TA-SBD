@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BarangController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PelangganController;
 
 /*
@@ -15,9 +16,7 @@ use App\Http\Controllers\PelangganController;
 |
 */
 
-Route::get('/', function () {
-    return view('layout.v_template');
-});
+
 Route::get('/barang', [BarangController::class, 'index'])->name('barang.index');
 Route::get('/barang/add', [BarangController::class, 'create'])->name('barang.create');
 Route::post('/barang/insert', [BarangController::class, 'store'])->name('barang.store');
@@ -31,3 +30,6 @@ Route::post('/pelanggan/insert', [PelangganController::class, 'store'])->name('p
 Route::get('/pelanggan/edit/{id}', [PelangganController::class, 'edit'])->name('pelanggan.edit');
 Route::post('/pelanggan/update/{id}', [PelangganController::class, 'update'])->name('pelanggan.update');
 Route::post('/pelanggan/delete/{id}', [PelangganController::class, 'delete'])->name('pelanggan.delete');
+
+Route::get('/', [LoginController::class, 'viewLogin'])->name('login.login');
+Route::post('/', [LoginController::class, 'auth'])->name('auth');
