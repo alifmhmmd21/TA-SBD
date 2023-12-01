@@ -24,6 +24,7 @@ Route::post('/barang/insert', [BarangController::class, 'store'])->name('barang.
 Route::get('/barang/edit/{id}', [BarangController::class, 'edit'])->name('barang.edit');
 Route::post('/barang/update/{id}', [BarangController::class, 'update'])->name('barang.update');
 Route::post('/barang/delete/{id}', [BarangController::class, 'delete'])->name('barang.delete');
+
 Route::get('/pelanggan', [PelangganController::class, 'index'])->name('pelanggan.index');
 Route::get('/pelanggan/add', [PelangganController::class, 'create'])->name('pelanggan.create');
 Route::post('/pelanggan/insert', [PelangganController::class, 'store'])->name('pelanggan.store');
